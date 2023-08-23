@@ -2,6 +2,6 @@
   "name": "universe",
   "private": true,
   "scripts": {
-    "dev": "cd backend && npm run develop"
+    "dev": "concurrently \"cd backend && npm run develop\" \"cd frontend && npm run dev\""
   }
 }
