@@ -1,8 +1,16 @@
 ---
+import type BookType from ""
+const books = await fetch(`http://127.0.0.1:1337/api/books`).then(res => res.json())
 ---
 
 <main>
   <h1>
     Hi, Astro
   </h1>
+  {books.data.map((book: BookType) => (
+	<h2>
+		{book.attributes.name}
+	</h2>
+  )
+  )}
 </main>
