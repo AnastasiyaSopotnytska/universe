@@ -1,5 +1,5 @@
 ---
-import type BookType from ""
+import type BookType from "../interfaces/Book"
 const books = await fetch(`http://127.0.0.1:1337/api/books`).then(res => res.json())
 ---
 
