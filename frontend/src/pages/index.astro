@@ -17,7 +17,7 @@ const books = await fetch(`http://127.0.0.1:1337/api/books`).then((res) =>
       ) : (
         <div class="flex flex-col justify-center items-center gap-4 w-full">
           <h2 class="text-gray-700 text-2xl font-semibold text-center">
-            Books from strapi
+            {`${books.data.length === 1 ? `Book` : `Books`} from strapi`}
           </h2>
           <div class="flex flex-wrap justify-center gap-4 w-full">
             {books.data.map((book: BookType) => (
