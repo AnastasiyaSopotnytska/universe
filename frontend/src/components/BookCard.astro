@@ -1,0 +1,13 @@
+---
+const {book} = Astro.props;
+---
+
+<div class="min-w-[300px] w-[300px] h-[300px] flex flex-col items-center justify-center gap-2 p-2 border border-gray-200 hover:bg-gray-100 rounded">
+  <span class="text-black font-semibold underline">{book.attributes.name}</span>
+  <span class="text-gray-600">({book.attributes.author})</span>
+  {book.attributes.description && (
+    <span class="w-full text-gray-600 max-h-[100%] overflow-hidden overflow-ellipsis">
+      {book.attributes.description}
+    </span>
+  )}
+</div>
